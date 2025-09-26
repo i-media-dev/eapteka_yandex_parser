@@ -39,7 +39,7 @@ class ColumnMixin:
             df[value] = column.apply(
                 lambda x: (str(x) + default_value * (
                     (len(self.columns) - 1) - str(x).count(delimeter)
-                )).split('-', len(self.columns) - 1)[i]
+                )).split(delimeter, len(self.columns) - 1)[i]
             )
         return df
 
